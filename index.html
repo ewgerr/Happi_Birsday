@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>З Днем Народження!🍾🎂</title>
+  <link rel="stylesheet" href="styl.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark')">🌗 Змінити тему</button>
+  <section class="header">
+    <div class="card">
+      <h1>З Днем народження, Дорога Матусю!</h1>
+      <p>
+        Ти — наша супергероїня, моє тепло, мій всесвіт ❤️<br />
+        Бажаю тобі океан радості, гори щастя і ціле небо світла ☀️<br />
+        Дуже сильно тебе любимо!😘
+      </p>
+    </div>
+    <div class="video-container">
+      <video controls width="600">
+        <source src="img/vid1.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео. Будь ласка, оновіть браузер.
+      </video>
+    </div>
+  </section>
+
+  <div class="collage">
+    <div class="photo" style="--angle: -5deg">
+      <img src="img/1.jpeg" alt="Мить 1">
+      <div class="caption">Моя перша усмішка — для тебе</div>
+    </div>
+    <div class="photo" style="--angle: 4deg">
+      <img src="img/10.jpg" alt="Мить 2">
+      <div class="caption">Нехай твоє серце завжди буде сповнене радості</div>
+    </div>
+    <div class="photo" style="--angle: -3deg">
+      <img src="img/331.jpg" alt="Мить 6">
+      <div class="caption">Ми завжди з тобою де б ти не була</div>
+    </div>
+    <div class="photo" style="--angle: 6deg">
+      <img src="img/3.png" alt="Мить 4">
+      <div class="caption">Обійми, які зцілюють</div>
+    </div>
+    <div class="photo" style="--angle: -7deg">
+      <img src="img/6.jpg" alt="Мить 5">
+      <div class="caption">Нехай твоє життя буде сповнене світла</div>
+    </div>
+      <div class="photo" style="--angle: 10deg">
+        <img src="img/2.jpeg" alt="Мить 3">
+        <div class="caption">Твоя усмішка — най краша</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-container">
+    <div class="carousel">
+      <div class="gallery" id="gallery"></div>
+    </div>
+    <div class="nav-buttons">
+      <button onclick="showPrevious()"> Назад</button>
+      <button onclick="showNext()"> Вперед</button>
+      <!-- <button id="prev-btn">Назад</button>
+      <button id="next-btn">Вперед</button> -->
+    </div>
+  </div>
+
+  <div class="modal" id="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Велике фото">
+  </div>
+  <footer>
+    <p>Розроблено з любов'ю ❤️</p>
+    <p>З Днем народження, матусю!🎂</p>
+    <p>Дякую за твою любов і турботу</p>
+    <p>Твої дорогенькі діти</p>
+    <p class="per">Desine by Anjelika|</p>
+    <p class="per">Create by Oleg</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>

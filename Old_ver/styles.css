@@ -1,0 +1,162 @@
+:root {
+    --bg-color: hsl(200, 60%, 99%);
+    --text-color: hsl(227, 75%, 14%);
+    --accent: hsl(3, 86%, 64%);
+    --font-family: 'Noto Sans', sans-serif;
+  }
+
+  body.dark {
+    --bg-color: hsl(227, 75%, 14%);
+    --text-color: hsl(200, 60%, 99%);
+    --accent: hsl(3, 71%, 56%);
+  }
+
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    background: var(--bg-color);
+    border: 2px solid var(--accent);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent);
+    color: white;
+    cursor: pointer;
+  }.collag-1, .collag-2, .collag-3, .collag-4, .collag-5, .collag-6 {
+    position: relative;
+    width: 600px; /* Ширина контейнера */
+    height: 400px; /* Висота контейнера */
+    margin: 20px auto; /* Центруємо контейнер */
+    border-radius: 16px; /* Закруглені кути */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тінь для контейнера */
+    overflow: hidden; /* Приховуємо зайве */
+    display: flex; /* Використовуємо flexbox */
+    justify-content: center; /* Центруємо текст по горизонталі */
+    align-items: center; /* Центруємо текст по вертикалі */
+    flex-wrap: wrap; /* Дозволяємо зображенням переноситися на новий ряд */
+    text-align: center; /* Вирівнюємо текст по центру */
+  }
+  
+  .collag-1 h4, .collag-2 h4, .collag-3 h4, .collag-4 h4, .collag-5 h4, .collag-6 h4 {
+    position: relative;
+    z-index: 1; /* Текст завжди зверху */
+    font-size: 1.5rem; /* Розмір тексту */
+    color: var(--accent); /* Колір тексту */
+    background: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон для тексту */
+    padding: 10px 20px; /* Відступи навколо тексту */
+    border-radius: 8px; /* Закруглені кути для текстового блоку */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тінь для тексту */
+  }
+  
+  .collag-1 img, .collag-2 img, .collag-3 img, .collag-4 img, .collag-5 img, .collag-6 img {
+    width: 150px; /* Розмір зображень */
+    height: 150px; /* Розмір зображень */
+    border-radius: 50%; /* Робимо зображення круглими */
+    margin: 10px; /* Відступ між зображеннями */
+    object-fit: cover; /* Зберігаємо пропорції зображення */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для зображень */
+  }
+  
+  .collag-4, .collag-5, .collag-6 {
+    position: relative; /* Для позиціонування зображень */
+    width: 600px; /* Ширина контейнера */
+    height: 400px; /* Висота контейнера */
+    margin: 20px auto; /* Центруємо колаж */
+    border-radius: 16px; /* Закруглені кути */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тінь для контейнера */
+    overflow: hidden; /* Приховуємо зайве */
+  }
+  
+  .collag-4 img, .collag-5 img, .collag-6 img {
+    position: absolute;
+    top: 10%; /* Центруємо по вертикалі */
+    left: 10%; /* Центруємо по горизонталі */
+    /* transform: translate(-50%, -50%); Зміщуємо центр зображення до центру контейнера */
+    width: 100%; /* Зображення займає всю ширину контейнера */
+    height: 100%; /* Зображення займає всю висоту контейнера */
+    object-fit: contain; /* Зберігаємо пропорції зображення */
+    opacity: 0; /* Початково приховані */
+    animation: slide 12s infinite; /* Анімація зміни зображень */
+  }
+  
+  .collag-4 img:nth-child(1),
+  .collag-5 img:nth-child(1),
+  .collag-6 img:nth-child(1) {
+    animation-delay: 0s; /* Перше зображення з'являється одразу */
+  }
+  
+  .collag-4 img:nth-child(2),
+  .collag-5 img:nth-child(2),
+  .collag-6 img:nth-child(2) {
+    animation-delay: 4s; /* Друге зображення з'являється через 4 секунди */
+  }
+  
+  .collag-4 img:nth-child(3),
+  .collag-5 img:nth-child(3),
+  .collag-6 img:nth-child(3) {
+    animation-delay: 8s; /* Третє зображення з'являється через 8 секунд */
+  }
+
+  .collag-6 img:nth-child(4){
+    animation-delay: 12s; /* Четверте зображення з'являється через 12 секунд */
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: scale(1) rotateY(0deg); /* Початкова позиція */
+    }
+    10% {
+      opacity: 1;
+      transform: scale(1.1) rotateY(0deg); /* Збільшення для ефекту */
+    }
+    30% {
+      opacity: 1;
+      transform: scale(1.1) rotateY(0deg); /* Зображення залишається видимим */
+    }
+    40% {
+      opacity: 0;
+      transform: scale(1) rotateY(90deg); /* Перелистування сторінки */
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1) rotateY(90deg); /* Повернення до початкової позиції */
+    }
+  }
+
+  
