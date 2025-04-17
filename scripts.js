@@ -1,4 +1,5 @@
 const photos = [
+    'img/0.jpg',
     'img/1.jpeg',
     'img/331.jpg',
     'img/10.jpg',
